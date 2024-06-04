@@ -28,6 +28,10 @@ services:
             }'
     stdin_open: true
     tty: true
-
+  frontend:
+    image: salmaelheni123/crudtuto-frontend:1.0.0
+    restart: on-failure
+    ports:
+      - 80:80
 volumes:
   db:
